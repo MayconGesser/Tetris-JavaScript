@@ -51,11 +51,20 @@ var langs = {
 
 	"el-GR" :
 	{
-		"h1" : "Αυτό το παιχνίδι δημιουργήθηκε από",
+		"h1" : "Αυτό το παιχνίδι δημιουργήθηκε από ",
 		"score" : "Σκορ: ",
 		"tetris" : "Το Tetris είναι το κλασικό παιχνίδι με τα τουβλάκια που πέφτουν και τώρα έχετε τη δυνατότητα να το παίξετε στον υπολογιστή σας. Με όλα τα κλασικά σχήματα τούβλων που εισήγαγε το αυθεντικό Tetris στο Nintendo, τώρα μπορείτε να το αποκτήσετε και να το παίξετε στον υπολογιστή σας. Ολοκληρώστε τις πίστες για να πάρετε περισσότερους πόντους και για να ανακαλύψετε αν είστε ένας πραγματικός μάστερ του Tetris!",
 		"today" : "Σήμερα είναι: ",
 		"time" : "Τοπική ώρα: "
+	},
+
+	"ja-JP" : 
+	{
+		"h1" : "このゲームはCodeExplainedによって作成されました",
+		"score" : "スコア: ",
+		"tetris" : "テトリス（ロシア語: Тетрис）は、落ち物パズルに分類されるコンピュータゲームシリーズの総称。この種のゲームの元祖的存在であり、1980年代末から1990年代初めにかけ、世界各国で大流行し、現在に至るまで様々な形で移植・アレンジされ、プレイされ続けている。",
+		"today" : "今日は: ",
+		"time" : "現地時間: "
 	}
 };
 
@@ -88,6 +97,7 @@ var es = document.getElementById('es');
 var de = document.getElementById('de');
 var ru = document.getElementById('ru');
 var gr = document.getElementById('gr');
+var ja = document.getElementById('ja');
 
 pt.addEventListener('click',getLang);
 en.addEventListener('click',getLang);
@@ -95,3 +105,4 @@ es.addEventListener('click',getLang);
 de.addEventListener('click',getLang);
 ru.addEventListener('click',getLang);
 gr.addEventListener('click',getLang);
+ja.addEventListener('click',getLang);
