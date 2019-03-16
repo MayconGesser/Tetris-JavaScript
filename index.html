@@ -1,29 +1,90 @@
-<html>
+<html lang="en">
 <head>
     <title>Tetris Game JS</title>
     <style>
         #score{
             display: inline-block;
         }
-        div{
-            font-size: 25px;
+        p, span, a{
+            font-size: 16px;
             font-weight: bold;
             font-family: monospace;
             text-align: center;
         }
         canvas{
-            display: block;
-            margin:0 auto;
+            padding-top: 100;
+            padding-left: 120;
+        }
+
+        #container {
+        }
+
+        #m {
+        	float: left;
+        	width: 33%;
+        	border: solid;
+        	word-wrap: break-word;
+        	background: lightblue;
+        }
+
+        #n {
+        	float: right;
+        	width: 33%;
+        	border: solid;
+        	word-wrap: break-word;
+        	background: purple;
+        }
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: #111;
         }
     </style>
 </head>
 <body>
-   <div>This Game Was Created By <a target="_blank" href="https://www.youtube.com/c/codeexplained">Code Explained</a></div><br>
-    <canvas id="tetris" width="200" height="400"></canvas>
-    <div>
-        Score : <div id="score">0</div>
-    </div>
+   <p><span id="credit">This Game Was Created By </span><a target="_blank" href="https://www.youtube.com/c/codeexplained">Code Explained</a></p><br>
+    <ul>
+      <li><a href="#" id="pt-br" name="pt-BR">Português BR<img src="http://icons.iconarchive.com/icons/wikipedia/flags/24/BR-Brazil-Flag-icon.png" alt=""></a></li>
+      <li><a href="#" id="en-us" name="en-US">English US<img src="http://icons.iconarchive.com/icons/wikipedia/flags/24/US-United-States-Flag-icon.png"></a></li>
+      <li><a href="#" id="es" name="es-ES">Español<img src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/24/Spain-icon.png"></a></li>
+      <li><a href="#" id="de" name="de-DE">Deutsch</a></li>
+      <li><a href="#" id="ru" name="ru">Русский<img src="http://icons.iconarchive.com/icons/wikipedia/flags/24/RU-Russia-Flag-icon.png"></a></li>
+      <li><a href="#" id="gr" name="el-GR">Ελληνικά<img src="http://icons.iconarchive.com/icons/custom-icon-design/flat-europe-flag/24/Greece-icon.png"></a></li>
+    </ul>   
+   <div id="container">
+   		<div id="m">
+   			<p id="descp">Tetris (Russian: Тетрис [ˈtɛtrʲɪs]; from "tetromino" and "tennis") is a tile-matching puzzle video game originally designed and programmed by Soviet Russian game designer Alexey Pajitnov (Russian: Алексе́й Леони́дович Па́житнов). The first playable version was completed on June 6, 1984, while he was working for the Dorodnitsyn Computing Centre of the Academy of Science of the Soviet Union in Moscow. He derived its name from the Greek numerical prefix tetra- (all of the game's pieces contain four segments) and tennis, Pajitnov's favorite sport. For more information, visit <a href="">this article</a></p>
+   		</div>
+	    <canvas id="tetris" width="200" height="400"></canvas>
+	    <div id="n">
+	    	<p><span id="today">Today is: </span><span id="current_date"></span></p> 
+	    	<p><span id="time">Local time: </span><span id="local_time"></span></p>
+	  	</div>
+	    <p>
+	        <span id="scr_name">Score : </span><span id="score">0</span>
+	    </p>   	
+   </div>
     <script src="tetrominoes.js"></script>
     <script src="tetris.js"></script>
+    <script src="langs.js"></script>
 </body>
 </html>
